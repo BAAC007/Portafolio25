@@ -1,4 +1,3 @@
-<!--Comenzamos-->
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -6,70 +5,117 @@
         <meta charset="utf-8">
         <style>
             @font-face{
-                font-family: tema;
-                src: url("race_sport/Race\ Sport.ttf") format("truetype");
+                font-family: Arial, Helvetica, sans-serif;
                 font-weight: normal;
                 font-style: normal;
             }
 
             body{
-                font-family: tema;
+                font-family: Arial, Helvetica, sans-serif; color: white;
             }
 
-            html,body{background:grey;}
+            html,body{background: #f0f0f0;}
             
             header,main,footer{
-                background:white;
+                background:#1e1e1e;
                 padding:20px;
                 width:800px;
                 margin:auto;
                 text-align:center;
+                text-transform: uppercase;
             }
             main{
                 display:grid;
                 grid-template-columns:auto auto auto;
                 gap:20px;
             }
+            article{
+                display: flex;
+                text-decoration: none; /*Anula los estilos de subrayado*/
+                color:inherit; /*Le pone color que deberia tener*/
+                color: #222; /*Fuerzo el color a azure*/
+                background: #ffffff; /*El fondo es de un color solido*/
+                padding: 10px; /*Le pongo margen interior*/
+                font-size: 15px; /*Le pongo tamaño a la letra*/
+                text-transform: uppercase; /*Texto va en mayusculas*/
+                display: block; /*Permito a los elementos que sean bloques*/
+                width: 200px; /*Su anchura es de 60 pixeles*/
+                text-align: center; /*Alineo el texto al centro*/
+                border-radius: 30%;
+                transition: transform 0.3s ease;
+            }
+            article:hover{
+                color: #4CAF50;
+                transform: scale(1.10); /* <-- Añadido */
+            }
+            article:active{
+                color: goldenrod;
+            }
+            img{
+                border-radius: 95%;
+            }
+            .card {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border-radius: 30%;
+            }
+
+            .card article {
+                cursor: pointer;
+            }
+
         </style>
     </head>
     <body>
         <header>
             <h1>Bryan Avila</h1>
-            <p>INFO@Avila.com</p>
+            <p>bc714006@gmail.com</p>
         </header>
         
         <main>
+            <a href="https://github.com/BAAC007" class="card">
+                <article>
+                    <p>Mi información</p>
+                    <h3>Github</h3>
+                    <p>Orden de mis apuntes en clases</p>
+                    <img src="descarga.gif">
+                </article>
+            </a>
+            <a href="https://www.linkedin.com/in/bryan-avila-12105b347/" class="card">
+                <article>
+                    <p>Mi portal</p>
+                    <h3>linkedin</h3>
+                    <p>Perfil laboral de mi persona</p>
+                    <img src="descarga.gif">
+                </article>
+            </a>
+            <a href="" class="card">
+                <article>
+                    <p>Categoria</p>
+                    <h3>Título</h3>
+                    <p>Descripción</p>
+                    <img src="descarga.gif">
+                </article>
+            </a>
             <article>
                 <p>Categoria</p>
-                <h3>Titulo</h3>
-                <p>Descripcion</p>
-                <img src="bryan.jpg">
+                <h3>Título</h3>
+                <p>Descripción</p>
+                <img src="descarga.gif">
             </article>
             <article>
                 <p>Categoria</p>
-                <h3>Titulo</h3>
-                <p>Descripcion</p>
-                <img src="bryan.jpg">
+                <h3>Título</h3>
+                <p>Descripción</p>
+                <img src="descarga.gif">
             </article>
             <article>
                 <p>Categoria</p>
-                <h3>Titulo</h3>
-                <p>Descripcion</p>
-                <img src="bryan.jpg">
+                <h3>Título</h3>
+                <p>Descripción</p>
+                <img src="descarga.gif">
             </article>
-            <article>
-                <p>Categoria</p>
-                <h3>Titulo</h3>
-                <p>Descripcion</p>
-                <img src="bryan.jpg">
-            </article>
-            <article>
-                <p>Categoria</p>
-                <h3>Titulo</h3>
-                <p>Descripcion</p>
-                <img src="bryan.jpg">
-            </article>
-            
         </main>
 
         <footer>
