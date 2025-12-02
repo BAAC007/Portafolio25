@@ -1,119 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>Portafolio</title>
-        <meta charset="utf-8">
-        <style>
-            body{
-                font-family: Arial, Helvetica, sans-serif; color: white;
-            }
 
-            html,body{background: #f0f0f0;}
-            
-            header,main,footer{
-                background:#1e1e1e;
-                padding:20px;
-                width:800px;
-                margin:auto;
-                text-align:center;
-                text-transform: uppercase;
-            }
-            main{
-                display:grid;
-                grid-template-columns:auto auto auto;
-                gap:20px;
-            }
-            article{
-                display: flex;
-                text-decoration: none; /*Anula los estilos de subrayado*/
-                color:inherit; /*Le pone color que deberia tener*/
-                color: #222; /*Fuerzo el color a azure*/
-                background: #ffffff; /*El fondo es de un color solido*/
-                padding: 10px; /*Le pongo margen interior*/
-                font-size: 15px; /*Le pongo tamaño a la letra*/
-                text-transform: uppercase; /*Texto va en mayusculas*/
-                display: block; /*Permito a los elementos que sean bloques*/
-                width: 200px; /*Su anchura es de 60 pixeles*/
-                text-align: center; /*Alineo el texto al centro*/
-                border-radius: 30%;
-                transition: transform 0.3s ease;
-            }
-            article:hover{
-                color: #4CAF50;
-                transform: scale(1.10); /* <-- Añadido */
-            }
-            article:active{
-                color: goldenrod;
-            }
-            img{
-                border-radius: 95%;
-            }
-            .card {
+<head>
+    <title>Portafolio</title>
+    <meta charset="utf-8">
+    <style>
+        html {
+            background: rgba(34, 34, 63, 0.986);
+            font-family: Arial;
+            font-size: 15px;
+        }
+
+        body {
+            width: 1000px;
+            display: flex;
+            margin: auto;
+            background: rgba(55, 46, 102, 0.705);
+        }
+
+        #izquierda {
+            flex: 2;
+            background: rgba(46, 32, 85, 0.973);
+            padding: 20px;
+            color: white;
+        }
+
+        #izquierda li {
+            font-size: 17px
+        }
+
+        #derecha {
+            flex: 4;
+            padding: 35px;
+            color: rgba(255, 255, 255, 0.904);
+        }
+
+        #derecha article {
+            display: flex;
+            flex-direction: column;
+            align-items: row;
+            gap: 20px;
+        }
+
+        #derecha article * {
+            padding: 1px;
+            margin: 1px;
+        }
+
+        #derecha h1 {
+            padding: 0px;
+        }
+
+        #derecha hr {
+            padding: 0.01%;
+        }
+
+        #derecha p {
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .text {
             text-decoration: none;
             color: inherit;
-            display: block;
-            border-radius: 30%;
-            }
+        }
+    </style>
+</head>
 
-            .card article {
-                cursor: pointer;
-            }
+<body>
+    <section id="izquierda">
+        <h1>Bryan Avila</h1>
+        <hr>
+        <h2>Contacto</h2>
+        <ul>
+            <li>bc714006@gmail.com</a></li><br>
+            <li><a href="https://github.com/BAAC007" class="text">Github</a></li>
+        </ul>
+        <article>
+            <h2>Leguajes más usados</h2>
+            <ul>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+                <li>Elemento 4</li>
+            </ul>
+        </article>
+    </section>
+    <hr>
+    <section id="derecha">
+        <h1>Proyectos Realizados</h1>
+        <article>
+            <hr>
+            <h2>1.- Menu para manejar datos de mysql desde python</h2>
+            <ul>
+                <h4>Con este menu se puede crear un registro el cual se puede añadir datos como: título, descripción,
+                    fecha y categoria_id. Leer el registro o los registros creados anteriormente. Actualizar un registro
+                    permitiendo cambiar los datos del registro creado. Y eliminar cualquier registro que haya sido
+                    creado.</h4><br><br>
+                <p><a href="https://github.com/BAAC007/Programacion-DAW/blob/main/examen1/02-examen_programacion.py"
+                        class="text">Saber más</a></p><br>
+                <hr><br><br>
+            </ul>
+        </article>
+        <article>
+            <h2>2.- Curriculum desde html</h2>
+            <ul>
+                <h4>En este proyecto se describe la estructura y el contenido de un currículum vitae generado por código. El
+                    currículum está diseñado para proporcionar una visión completa sobre la persona.</h4><br><br>
+                <p><a href="https://github.com/BAAC007/Programacion-DAW/blob/main/examen1/02-examen_programacion.py"
+                        class="text">Saber más</a></p><br>
+                <hr><br><br>
+            </ul>
+        </article>
+        <article>
+            <h2>3.- Base de datos para mantener registros.</h2>
+            <ul>
+                <h4>Con este menu se puede crear un registro el cual se puede añadir datos como: título, descripción,
+                    fecha y categoria_id. Leer el registro o los registros creados anteriormente. Actualizar un registro
+                    permitiendo cambiar los datos del registro creado. Y eliminar cualquier registro que haya sido
+                    creado.</h4><br><br>
+                <p><a href="https://github.com/BAAC007/Programacion-DAW/blob/main/examen1/02-examen_programacion.py"
+                        class="text">Saber más</a></p><br>
+                <hr><br><br>
+            </ul>
+        </article>
+        <article>
+            <h2>1.- Realizacion de un menu para manejar datos de mysql desde python</h2>
+            <ul>
+                <h4>Con este menu se puede crear un registro el cual se puede añadir datos como: título, descripción,
+                    fecha y categoria_id. Leer el registro o los registros creados anteriormente. Actualizar un registro
+                    permitiendo cambiar los datos del registro creado. Y eliminar cualquier registro que haya sido
+                    creado.</h4><br><br>
+                <p><a href="https://github.com/BAAC007/Programacion-DAW/blob/main/examen1/02-examen_programacion.py"
+                        class="text">Saber más</a></p><br>
+                <hr>
+            </ul>
+        </article>
+    </section>
+</body>
 
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>Bryan Avila</h1>
-            <p>bc714006@gmail.com</p>
-        </header>
-        
-        <main>
-            <a href="https://github.com/BAAC007" class="card">
-                <article>
-                    <p>Mi información</p>
-                    <h3>Github</h3>
-                    <p>Orden de mis apuntes en clases</p>
-                    <img src="descarga.gif">
-                </article>
-            </a>
-            <a href="https://www.linkedin.com/in/bryan-avila-12105b347/" class="card">
-                <article>
-                    <p>Mi portal</p>
-                    <h3>linkedin</h3>
-                    <p>Perfil laboral de mi persona</p>
-                    <img src="descarga.gif">
-                </article>
-            </a>
-            <a href="https://baac007.github.io/Curriculum25/CV.html" class="card">
-                <article>
-                    <p>Categoria</p>
-                    <h3>Curriculum</h3>
-                    <p>Una breve presentación de mi persona</p>
-                    <img src="descarga.gif">
-                </article>
-            </a>
-            <article>
-                <p>Categoria</p>
-                <h3>Título</h3>
-                <p>Descripción</p>
-                <img src="descarga.gif">
-            </article>
-            <article>
-                <p>Categoria</p>
-                <h3>Título</h3>
-                <p>Descripción</p>
-                <img src="descarga.gif">
-            </article>
-            <article>
-                <p>Categoria</p>
-                <h3>Título</h3>
-                <p>Descripción</p>
-                <img src="descarga.gif">
-            </article>
-        </main>
-
-        <footer>
-            (c) 2025 Bryan Alejandro Avila Castro
-        </footer>
-    </body>
 </html>
