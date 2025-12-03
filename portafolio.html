@@ -5,41 +5,82 @@
     <title>Portafolio</title>
     <meta charset="utf-8">
     <style>
+        :root {
+            --bg-dark: #0f0f17;
+            --bg-panel: #1a1a27;
+            --bg-light: #252536;
+            --text-main: #ffffff;
+            --text-muted: #c9c9d9;
+            --accent: #7c5cff;
+            --accent-light: #9b82ff;
+        }
+
         html {
             background: rgba(34, 34, 63, 0.986);
-            font-family: Arial;
-            font-size: 15px;
+            font-family: "Inter", "Segoe UI", Arial, sans-serif;
+            font-size: 16px;
+            letter-spacing: 0.2px;
         }
 
         body {
-            width: 1000px;
+            max-width: 1150px;
+            margin: 50px auto;
             display: flex;
-            margin: auto;
-            background: rgba(55, 46, 102, 0.705);
+            background: var(--bg-panel);
+            border-radius: 18px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
         }
 
         #izquierda {
-            flex: 2;
-            background: rgba(46, 32, 85, 0.973);
-            padding: 20px;
-            color: white;
+            flex: 1.2;
+            background: linear-gradient(180deg, var(--bg-light), #1b1b42);
+            padding: 40px 30px;
+            color: var(--text-main);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        #izquierda h1 {
+            font-size: 30px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        #izquierda h2 {
+            margin-top: 28px;
+            font-size: 19px;
+            opacity: 0.9;
+            font-weight: 600;
+        }
+
+        #izquierda ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 10px;
         }
 
         #izquierda li {
-            font-size: 17px
+            font-size: 15px;
+            margin-bottom: 10px;
+            opacity: 0.95;
         }
 
         #derecha {
-            flex: 4;
-            padding: 35px;
-            color: rgba(255, 255, 255, 0.904);
+            flex: 2.8;
+            padding: 50px 70px;
+            color: var(--text-muted);
         }
 
         #derecha article {
             display: flex;
             flex-direction: column;
-            align-items: row;
+            flex-wrap: nowrap;
             gap: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: 0.25s;
         }
 
         #derecha article * {
@@ -47,22 +88,76 @@
             margin: 1px;
         }
 
+        #derecha article:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
         #derecha h1 {
-            padding: 0px;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            font-size: 34px;
+            font-weight: 700;
         }
 
-        #derecha hr {
-            padding: 0.01%;
+        #derecha h2 {
+            color: var(--text-main);
+            font-weight: 600;
         }
 
-        #derecha p {
-            text-align: center;
-            text-decoration: none;
+        .proyecto {
+            margin-bottom: 45px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .proyecto:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .proyecto p {
+            line-height: 1.6;
+            margin: 10px 0 15px;
         }
 
         .text {
+            display: inline-block;
+            padding: 10px 16px;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 8px;
             text-decoration: none;
-            color: inherit;
+            font-size: 15px;
+            transition: 0.2s;
+            font-weight: 500;
+        }
+
+        .text:hover {
+            background: var(--accent-light);
+        }
+
+        .lenguajes li {
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .barra {
+            background: rgba(255, 255, 255, 0.2);
+            height: 8px;
+            border-radius: 5px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+
+        .llena {
+            height: 100%;
+            background: #6c63ff;
+            /* Accent color */
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -71,76 +166,95 @@
     <section id="izquierda">
         <h1>Bryan Avila</h1>
         <hr>
+
         <h2>Contacto</h2>
         <ul>
             <li>bc714006@gmail.com</a></li><br>
             <li><a href="https://github.com/BAAC007" class="text">Github</a></li>
         </ul>
-        <article>
-            <h2>Leguajes más usados</h2>
-            <ul>
-                <li>Elemento 1</li>
-                <li>Elemento 2</li>
-                <li>Elemento 3</li>
-                <li>Elemento 4</li>
-            </ul>
-        </article>
+
+        <h2>Leguajes más usados</h2>
+        <ul class="lenguajes">
+            <li>
+                SQL
+                <div class="barra">
+                    <div class="llena" style="width: 40%;"></div>
+                </div>
+            </li>
+            <li>
+                Python
+                <div class="barra">
+                    <div class="llena" style="width: 80%;"></div>
+                </div>
+            </li>
+            <li>
+                HTML
+                <div class="barra">
+                    <div class="llena" style="width: 85%;"></div>
+                </div>
+            </li>
+            <li>
+                CSS
+                <div class="barra">
+                    <div class="llena" style="width: 55%;"></div>
+                </div>
+            </li>
+        </ul>
     </section>
+
     <hr>
+
     <section id="derecha">
-        <article>
-            <h1>Proyectos Realizados</h1>
-            <hr>
+        <h1>Proyectos Realizados</h1>
+        <hr>
+        <div class="proyecto">
             <h2>1.- Menu para manejar datos de mysql desde python</h2>
             <ul>
-                <h4>Con este menu se puede crear un registro el cual se puede añadir datos como: título, descripción,
+                <p>Con este menu se puede crear un registro el cual se puede añadir datos como: título, descripción,
                     fecha y categoria_id. Leer el registro o los registros creados anteriormente. Actualizar un registro
                     permitiendo cambiar los datos del registro creado. Y eliminar cualquier registro que haya sido
-                    creado.</h4><br><br>
-                <p><a href="https://github.com/BAAC007/Programacion-DAW/blob/main/examen1/02-examen_programacion.py"
-                        class="text">Saber más</a></p><br>
-                <hr><br><br>
+                    creado.</p>
+                <a href="https://github.com/BAAC007/Programacion-DAW/blob/main/examen1/02-examen_programacion.py"
+                    class="text">Saber más</a>
             </ul>
-        </article>
-        <article>
+        </div>
+        <div class="proyecto">
             <h2>2.- Curriculum desde html</h2>
             <ul>
-                <h4>En este proyecto se describe la estructura y el contenido de un currículum vitae generado por
+                <p>En este proyecto se describe la estructura y el contenido de un currículum vitae generado por
                     código. El
-                    currículum está diseñado para proporcionar una visión completa sobre la persona.</h4><br><br>
-                <p><a href="https://github.com/BAAC007/Lenguajes_de_marcas/blob/main/lenguajes%20de%20marcas/examen.cv/1-Creacion_de_curriculum.html"
-                        class="text">Saber más</a></p><br>
-                <hr><br><br>
+                    currículum está diseñado para proporcionar una visión completa sobre la persona.</p>
+                <a href="https://github.com/BAAC007/Lenguajes_de_marcas/blob/main/lenguajes%20de%20marcas/examen.cv/1-Creacion_de_curriculum.html"
+                    class="text">Saber más</a>
             </ul>
-        </article>
-        <article>
+        </div>
+        <div class="proyecto">
             <h2>3.- Base de datos para mantener registros.</h2>
             <ul>
-                <h4>Este proyecto muestra paso a paso cómo gestionar una base de datos completa. Se inicia creando la
+                <p>Este proyecto muestra paso a paso cómo gestionar una base de datos completa. Se inicia creando la
                     base de datos 'portafolio examen' y sus tablas 'piezasportafolio' y 'categoriasportafolio',
                     definiendo sus campos y relaciones mediante una clave foránea. Luego se insertan, leen, actualizan y
                     eliminan datos para comprobar su funcionamiento. También se realizan consultas más avanzadas, como
                     un LEFT JOIN y la creación de una vista, y se finaliza configurando un usuario con privilegios
                     específicos. Una guía práctica y clara para entender la administración básica y avanzada de bases de
-                    datos.</h4><br><br>
-                <p><a href="https://github.com/BAAC007/Bases_de_Datos/blob/main/Ejercicios_de_bases%20de_datos/01-examen_bases_de_datos.sql"
-                        class="text">Saber más</a></p><br>
-                <hr><br><br>
+                    datos.</p>
+                <a href="https://github.com/BAAC007/Bases_de_Datos/blob/main/Ejercicios_de_bases%20de_datos/01-examen_bases_de_datos.sql"
+                    class="text">Saber más</a>
             </ul>
-        </article>
-        <article>
+        </div>
+        <div class="proyecto">
             <h2>4.- Modelo de vista y controlador</h2>
             <ul>
-                <h4>La fusión de los proyectos anteriores ha dado como resultado una pagina web que mostrará los datos de una vista creada de una base de datos en
+                <p>La fusión de los proyectos anteriores ha dado como resultado una pagina web que mostrará los datos
+                    de una vista creada de una base de datos en
                     mysql así podemos ver los datos guardados dentro de la base de datos, por otro lado usando HTML y
                     CSS podemos modificar, personalizar y administrar nuestra pagina web, y usando codigo de python para
                     complementar y poder construir nuestro programa haciendo que tenga forma y que trabaje
-                    correctamente.</h4><br><br>
-                <p><a href="https://github.com/BAAC007/Programacion-DAW/blob/main/examen1/02-examen_programacion.py"
-                        class="text">Saber más</a></p><br>
-                <hr>
+                    correctamente.</p>
+                <a href="https://github.com/BAAC007/Proyecto_intermodular/blob/main/10-MCV.py" class="text">Saber
+                    más</a>
             </ul>
-        </article>
+        </div>
     </section>
 </body>
 
